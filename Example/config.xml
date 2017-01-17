@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigObject>
+  <App>
+    <Name>XmlConfig Example</Name>
+    <Version type="System.Int16">1</Version>
+    <Secret>
+      <Show type="System.Boolean">True</Show>
+    </Secret>
+  </App>
+</ConfigObject>
