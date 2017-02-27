@@ -15,10 +15,21 @@ namespace Example
 
             Console.WriteLine("\nFeel the power of simple xml configuration");
 
-            if (Config.Default.Secret.Show == true)
-                Console.WriteLine("\nPowered by the force...");
+            SuperSecret(Config.Default.Secret.Show);
+
+            Config.Default.Secret.Show = true;
+            Config.Save();
+
+            SuperSecret(Config.Default.Secret.Show);
+            
 
             Console.ReadKey();
+        }
+
+        private static void SuperSecret(bool flag)
+        {
+            if (flag)
+                Console.WriteLine("\nPowered by the force...");
         }
     }
 }

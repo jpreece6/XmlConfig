@@ -4,7 +4,7 @@
     <Name>XmlConfig Example</Name>
     <Version type="System.Int16">1</Version>
     <Secret>
-      <Show type="System.Boolean">True</Show>
+      <Show type="System.Boolean">False</Show>
     </Secret>
   </App>
 </ConfigObject>

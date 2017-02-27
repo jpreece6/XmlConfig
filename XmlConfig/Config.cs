@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
+﻿
 using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
-using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace XmlConfig
@@ -16,7 +8,7 @@ namespace XmlConfig
     public static class Config
     {
         public static dynamic Default = new ConfigObject();
-        public static string SavePath;
+        public static string SavePath { get; set; }
 
         static Config()
         {
@@ -24,11 +16,26 @@ namespace XmlConfig
             Load(SavePath);
         }
 
-        public static void Save(ConfigObject config)
+        /// <summary>
+        /// Saves configuration to disk
+        /// </summary>
+        public static void Save()
         {
-            Serialise(config);
+            Serialise(Default);
         }
 
+        /// <summary>
+        /// Load a configuration from the save path location
+        /// </summary>
+        public static void Load()
+        {
+            Default = Deserialise(SavePath);
+        }
+
+        /// <summary>
+        /// Load a configuration from a specified path
+        /// </summary>
+        /// <param name="path">Path to load from</param>
         public static void Load(string path)
         {
             Default = Deserialise(path);
