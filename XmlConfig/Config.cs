@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
@@ -13,6 +14,13 @@ namespace XmlConfig
         static Config()
         {
             SavePath = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location) + @"\config.xml";
+
+            if (File.Exists(SavePath) == false)
+            {
+                File.Create(SavePath).Close();
+                File.WriteAllText(SavePath, "<?xml version=\"1.0\" encoding=\"utf-8\"?><ConfigObject></ConfigObject>");
+            }
+
             Load(SavePath);
         }
 
