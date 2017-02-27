@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>XmlConfig</id>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <authors>Josh Preece</authors>
     <owners>Josh Preece</owners>
     <licenseUrl>https://github.com/looterwar/XmlConfig/blob/master/LICENSE</licenseUrl>
