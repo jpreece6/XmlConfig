@@ -13,7 +13,15 @@ namespace XmlConfig
 
         static Config()
         {
-            SavePath = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location) + @"\config.xml";
+            try
+            {
+                SavePath = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location) +
+                           @"\config.xml";
+            }
+            catch (NullReferenceException nref)
+            {
+                SavePath = @"C:\config.xml";
+            }
 
             if (File.Exists(SavePath) == false)
             {
