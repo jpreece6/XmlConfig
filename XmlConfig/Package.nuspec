@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>XmlConfig</id>
+    <version>0.1</version>
+    <authors>Josh Preece</authors>
+    <owners>Josh Preece</owners>
+    <licenseUrl>https://github.com/looterwar/XmlConfig/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/looterwar/XmlConfig</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simple configuration library that uses XML to persist data.</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2017 Josh Preece</copyright>
+    <tags>XmlConfig Xml Config</tags>
+  </metadata>
+  <files>
+        <file src="bin\Release\XmlConfig.dll" target="lib\net45\XmlConfig.dll" />
+    </files>
+</package>
