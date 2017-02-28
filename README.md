@@ -14,7 +14,7 @@ XmlConfig starts with a configuration definition. This tells XmlConfig what prop
     <User>
       <Name type="System.String">Josh</Name>
       <Age type="System.Int16">22</Age>
-      <SignupYear>2017</SignupYear>
+      <SignupYear type="System.Int32">2017</SignupYear>
     </User>
 </ConfigObject>
 ```
