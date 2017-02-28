@@ -52,7 +52,23 @@ short userAge = Config.User.Age;
 if (userAge < 18)
     Console.WriteLine("Maybe next year..");
 
-Output: aybe next year..;
+Output: Maybe next year..;
+Config Structure:
+
+<ConfigObject>
+    <App>
+      <Name type="System.String">Major update!</Name>
+      <Version type="System.String">0.1</Version>
+    </App>
+    
+    <User>
+      <Name type="System.String">Josh</Name>
+      <Age type="System.Int16">17</Age>
+      <SignupYear type="System.Int32">2017</SignupYear>
+    </User>
+</ConfigObject>
+
+
 ```
 
 Note in order to save data to disk the config definition needs to define the property first!
