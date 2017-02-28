@@ -3,9 +3,9 @@ Simple configuration library that uses XML to persist data.
 
 ### Example Config
 
-`<ConfigObject>`
+```<ConfigObject>
 
-    `<App>
+    <App>
     
       <Name type="System.String">Testing App</Name>
       
@@ -20,9 +20,10 @@ Simple configuration library that uses XML to persist data.
       
       <SignupYear>2017</SignupYear>
       
-    </User>`
+    </User>
     
-`</ConfigObject>`
+</ConfigObject>
+```
 
 This config file can be read and modifed using a static object..
 
